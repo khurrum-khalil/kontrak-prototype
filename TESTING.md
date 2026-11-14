@@ -70,7 +70,7 @@ Run `npm run reset`, then `npm start`.
 
 ## 3. Live demo script (about 8 minutes)
 
-Before the demo, run `npm run reset` and `npm start`. Use two browser windows: a normal one for the student and a private one for the client.
+Before the demo, run `npm run reset` and `npm start`. Run this demo on your laptop, not on the Vercel link: the hosted site can lose a brand-new sign-up between steps (see README, section 3). Use two browser windows: a normal one for the student and a private one for the client.
 
 | # | Time | Who | Do this | Say this |
 |---|---|---|---|---|

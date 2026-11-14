@@ -221,7 +221,8 @@ export function writeDemoJson(today = todayISO()) {
     briefs,
     stats: { open_briefs: briefs.length, verified_students: db.filter('users', (u) => u.role === 'student' && u.status === 'verified').length, compliant_placements: db.filter('contracts', (c) => ['signed_off', 'closed'].includes(c.status)).length },
   };
-  fs.writeFileSync(path.join(root, 'public', 'js', 'demo-data.json'), JSON.stringify(out, null, 1));
+  try { fs.writeFileSync(path.join(root, 'public', 'js', 'demo-data.json'), JSON.stringify(out, null, 1)); }
+  catch { /* read-only file system (for example on Vercel): keep the committed snapshot */ }
 }
 
 // CLI

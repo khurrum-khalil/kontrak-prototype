@@ -821,13 +821,19 @@ app.use((req, res) => res.status(404).sendFile(path.join(ROOT, 'public', '404.ht
 const missing = await db.load();
 if (missing.length) { console.log(`Creating demo workbooks: ${missing.join(', ')}`); await seed(); }
 D.reloadRules();
-writeDemoJson();
 auth.purgeExpiredSessions();
-db.watchConfig(() => D.reloadRules());
-const server = app.listen(PORT, () => {
-  console.log(`\n  Kontrak prototype running at http://localhost:${PORT}`);
-  console.log('  Data: /data/*.xlsx  ·  Reset: npm run reset  ·  Stop: Ctrl+C\n');
-});
-async function shutdown() { console.log('\nSaving workbooks…'); server.close(); await db.flushAll(); process.exit(0); }
-process.on('SIGINT', shutdown);
-process.on('SIGTERM', shutdown);
+
+// On Vercel the app runs as a function (api/index.js imports it); locally it listens on a port.
+if (!db.IS_VERCEL) {
+  writeDemoJson();
+  db.watchConfig(() => D.reloadRules());
+  const server = app.listen(PORT, () => {
+    console.log(`\n  Kontrak prototype running at http://localhost:${PORT}`);
+    console.log('  Data: /data/*.xlsx  ·  Reset: npm run reset  ·  Stop: Ctrl+C\n');
+  });
+  const shutdown = async () => { console.log('\nSaving workbooks…'); server.close(); await db.flushAll(); process.exit(0); };
+  process.on('SIGINT', shutdown);
+  process.on('SIGTERM', shutdown);
+}
+
+export default app;

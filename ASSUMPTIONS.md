@@ -54,12 +54,13 @@ Where the sources were silent or disagreed, this is what the prototype does. The
 3. **Lucide icons.** The design system pinned lucide-static 0.474.0, which does not exist on npm. The icons came from lucide-static 1.72.0, outline style, with the stroke set to 1.5. They are stored offline in `public/assets/icons/` and coloured through a CSS mask, so they inherit the text colour.
 4. **Logo.** The mark SVGs from the design system are used unchanged. The lockup SVGs render their wordmark with SVG text, which cannot load web fonts when used as an image. The wordmark is therefore HTML in Syne Bold with the gold "AK", following the proportions in `Logo/Logo.html`: icon, fading divider, wordmark, and the tagline in 8 to 9 px with 3 px tracking. On navy, "AK" uses gold-light `#E4B35A`, as on the identity sheet.
 5. **Fonts** load from Google Fonts with `display=swap`. Offline, the system fonts take over.
-6. **Sessions** use random tokens. Only the SHA-256 hash is stored in `sessions`, so a leaked workbook does not leak live sessions.
+6. **Sessions** are HMAC-signed cookies (`userId.expiry.signature`), which the brief allowed as an option. They were chosen over server-side tokens so that every Vercel copy can check a login. Logging out clears the cookie; suspending a user blocks them on the next request. The `sessions` sheet is no longer used and is emptied at start.
 7. **CSRF.** API mutations must be sent as JSON. With SameSite=Lax cookies, this blocks cross-site form posts.
 8. **Excel edits while running.** The config workbook is watched and reloaded. Other workbooks are read once at start; edit them with the server stopped, or the server's next write overwrites the edit.
 9. **German copy.** The German strings are a draft written without a native speaker and are marked `_review` in `de.json`. The app interface stays in English, as in the pitch.
 10. **Placeholder domain.** Canonical, Open Graph and sitemap URLs use `https://kontrak.example` until the team has a domain.
 11. **Briefs.** The seed has 19 briefs (12 open, 7 in progress or completed) rather than 12 to 16. Every contract status needs a brief behind it.
+12. **Vercel hosting.** The full app runs on Vercel with data in `/tmp`, so it resets when the app goes idle, as agreed with the team. New sign-ups on the hosted site are unreliable because Vercel can run several copies with separate data. Demo accounts work everywhere. Persistent hosting needs a disk (for example Render) or a database.
 
 ## D. What the team must validate before anything goes live
 

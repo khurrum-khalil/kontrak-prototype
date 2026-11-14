@@ -59,7 +59,17 @@ Run a reset before every live demo. Seed dates are relative to today, so deadlin
 
 ---
 
-## 3. Folder map
+## 3. Hosted version on Vercel
+
+Live at **https://kontrak-prototype.vercel.app** (Vercel project `kontrak-prototype`).
+
+- **Deploy changes:** run `vercel deploy --prod` in the project folder, or connect the GitHub repository with `vercel git connect` so every push deploys.
+- **Data is temporary.** Vercel can only write to `/tmp`, which is wiped when the app goes idle. Each fresh start reseeds the demo data. Sign-ups, bids and contracts made on the hosted site do not last.
+- **Several copies.** Vercel may run more than one copy of the app at the same time, each with its own data. Demo accounts exist in every copy and work reliably. A **brand-new sign-up exists in only one copy**, so its next requests can fail. For the live jury demo, run the app locally with `npm start` and use the hosted link for people to explore.
+- **Login secret.** Sessions are signed cookies. The secret is the `KONTRAK_SECRET` environment variable in the Vercel project. Locally, a secret is created once in `data/.session-secret`.
+- **Files:** `api/index.js` (entry point), `vercel.json` (routing), `.vercelignore` (keeps `data/`, `reference/` and `Logo/` out of uploads).
+
+## 4. Folder map
 
 ```
 kontrak/
@@ -107,7 +117,7 @@ Money is stored as integer cents (`48000` = €480). Dates are ISO. Demo rows ha
 
 ---
 
-## 4. Change the rules in Excel
+## 5. Change the rules in Excel
 
 Every rule is read from `data/kontrak_config.xlsx` → sheet `config`. Nothing is hard-coded in the routes.
 
@@ -128,14 +138,14 @@ There are two ways to change a rule:
 
 Every change is written to `audit_log`.
 
-## 5. Edit copy
+## 6. Edit copy
 
 - **Public page text** lives in the HTML files in `public/`. Pages are plain HTML with no build step.
 - **Header, footer, hero, FAQ and waitlist strings** come from `public/js/i18n/en.json` and `de.json`. Elements carry `data-i18n="key"`. The German file starts with a `_review` note: a native speaker must check it.
 - **App screens** are built in `public/js/pages/*.js`.
 - **Voice rules:** address the reader as *you*, sentence case, no exclamation marks, no emoji, money with symbol and separator (€1,240). Say *brief*, *engagement*, *students*, *clients*. Never *gig*, *seller* or *talent*.
 
-## 6. Add a country module later
+## 7. Add a country module later
 
 The model is **one platform with country-specific compliance modules**, not three marketplaces.
 
@@ -146,10 +156,10 @@ The model is **one platform with country-specific compliance modules**, not thre
 5. **Go live:** add the country to `live_jurisdictions`. Until then, its briefs stay visible but fail gate 1 ("Austria briefs are not live yet").
 6. **Mirror:** copy the changes to `public/js/compliance-client.js` and add test cases. `npm test` checks that both files agree.
 
-## 7. Security notes (prototype level)
+## 8. Security notes (prototype level)
 
 - Passwords are hashed with scrypt and a random salt. Plain-text passwords are never stored.
-- Sessions use a random token in an HttpOnly, SameSite=Lax cookie. Only its SHA-256 hash is stored.
+- Sessions are HMAC-signed HttpOnly, SameSite=Lax cookies that expire after 7 days. The signature covers the user ID and email, so a forged or swapped cookie is rejected. Suspended accounts are refused on every request.
 - Login is rate-limited in memory to 5 failed attempts per 10 minutes.
 - Every API mutation requires JSON, every route checks the role, all output is escaped, and CSV exports neutralise formula injection.
 - No secrets are in the repository. `/data` and `node_modules` are in `.gitignore`.

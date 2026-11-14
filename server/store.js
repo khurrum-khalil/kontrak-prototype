@@ -7,7 +7,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const DATA_DIR = path.join(ROOT, 'data');
+// On Vercel only /tmp is writable, and it is wiped when the function goes idle (data resets to the seed).
+export const IS_VERCEL = !!process.env.VERCEL;
+export const DATA_DIR = process.env.KONTRAK_DATA_DIR || (IS_VERCEL ? '/tmp/kontrak-data' : path.join(ROOT, 'data'));
 
 const T = ['created_at', 'updated_at'];
 // One workbook per area, one sheet per table. Column order is the order shown in Excel.

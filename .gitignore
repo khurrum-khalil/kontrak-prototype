@@ -3,3 +3,4 @@ data/
 *.xlsx.tmp
 .DS_Store
 kontrak-prototype.zip
+.vercel
