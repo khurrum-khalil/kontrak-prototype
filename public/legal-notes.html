@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How compliance works · Kontrak</title>
+<meta name="description" content="How Kontrak's compliance model works: employment not freelancing, three gates before every bid, the day account, the wage floor and escrow. With a clear disclaimer.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kontrak.example/legal-notes.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kontrak">
+<meta property="og:title" content="How compliance works · Kontrak">
+<meta property="og:description" content="How Kontrak's compliance model works: employment not freelancing, three gates before every bid, the day account, the wage floor and escrow. With a clear disclaimer.">
+<meta property="og:url" content="https://kontrak.example/legal-notes.html">
+<meta property="og:image" content="https://kontrak.example/assets/app-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How compliance works · Kontrak">
+<meta name="twitter:description" content="How Kontrak's compliance model works: employment not freelancing, three gates before every bid, the day account, the wage floor and escrow. With a clear disclaimer.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-shell="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head "><div class="container">
+  <span class="eyebrow ">Legal notes</span><h1 class="h1">How the compliance model works</h1><p class="lead">One platform, country-specific compliance modules. Germany is the first and only live module.</p>
+</div></section>
+<section class="section-tight" style="padding-bottom:88px"><div class="container narrow legal-body">
+  <div class="callout warn"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/triangle-alert.svg);--s:18px"></span><div><b>Information, not legal advice.</b> Kontrak is a student prototype. It is not approved by any authority. Your residence permit, your Ausländerbehörde and qualified advisers decide individual cases.</div></div>
+  <h2>1. Employment, not freelancing</h2>
+  <p>Non-EU students on a §16b residence permit may take up employment within limits. Self-employment and freelancing generally need separate permission from the Ausländerbehörde. Platforms that list workers as self-employed are therefore off limits for most of our students. On Kontrak, every engagement is an employment relationship for a single brief, documented in an engagement letter under German law.</p>
+  <h2>2. Three gates before any bid</h2>
+  <p><b>Eligible?</b> The student must be verified, the brief open, the jurisdiction live, and the student's permit type allowed by the brief. Ineligible briefs never reach the matched feed.</p>
+  <p><b>Within the cap?</b> The bid's hours, split into sessions, must fit the remaining day account (140 full or 280 half days per calendar year) and the 20-hour weekly cap, spread evenly from today to the deadline. Days already reserved for signed work count too. A bid that does not fit is blocked, not warned.</p>
+  <p><b>Above the floor?</b> The fee divided by the hours must reach the statutory minimum wage in force during the work: €13.90 per hour in 2026 and €14.60 from 1 January 2027. If monthly earnings would pass the €603 Minijob ceiling, we flag it without blocking.</p>
+  <p>The browser shows the result instantly, but the server runs every gate again and its decision is final. Each decision is written to the audit log.</p>
+  <h2>3. The day account</h2>
+  <p>Every hour logged updates the day account immediately. A date with more than four hours counts as a full day; four hours or fewer as a half day. If a second entry on the same date takes it past four hours, the half day becomes a full day. Hours that would exceed the account or the weekly cap cannot be logged.</p>
+  <h2>4. Contracts, escrow and traceability</h2>
+  <p>Each engagement has one contract ID, for example KTK-2026-0412. The engagement letter, the escrow record, the messages and the hour log all hang off it. The client funds escrow after both sides sign. The student requests release on delivery; the client signs off, and the payment is released. Once released, a payment can't be reversed.</p>
+  <h2>5. What is simulated</h2>
+  <ul><li>Escrow, card and SEPA payments, and payouts. No money moves.</li><li>E-signatures. Typing your name and ticking the consent box records a name and timestamp only.</li><li>Verification emails. The link is shown on screen.</li><li>The Handelsregister check. HRB and HRA numbers pass; others go to manual review.</li></ul>
+  <h2>6. What the team still has to validate</h2>
+  <p>Legal wording of the engagement letter with a qualified person, permit practice per Ausländerbehörde, payroll and social-insurance handling, and real providers for payments, signatures and register checks.</p>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/simple.js"></script>
+</body>
+</html>

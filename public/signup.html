@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign up · Kontrak</title>
+<meta name="description" content="Create a Kontrak account as a student or as a client.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kontrak.example/signup.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kontrak">
+<meta property="og:title" content="Sign up · Kontrak">
+<meta property="og:description" content="Create a Kontrak account as a student or as a client.">
+<meta property="og:url" content="https://kontrak.example/signup.html">
+<meta property="og:image" content="https://kontrak.example/assets/app-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sign up · Kontrak">
+<meta name="twitter:description" content="Create a Kontrak account as a student or as a client.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-shell="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+
+<div class="auth-wrap">
+  <div class="auth-side"><span class="eyebrow on-navy">Create your account</span><h1 class="h2" id="side-title">Legal work that fits your permit</h1>
+    <ul class="stack" style="--gap:12px;list-style:none;padding:0;color:var(--text-on-navy-muted)" id="side-points"></ul></div>
+  <div class="auth-main"><div id="signup-root">
+    <h2 class="h3">Sign up</h2>
+    <fieldset class="role-pick mt-16" style="border:0;padding:0;margin:16px 0 0"><legend class="sr-only">Account type</legend>
+      <label><input type="radio" name="role-pick" value="student" checked><span class="title">I am a student</span><span class="small muted">Find briefs that fit your permit</span></label>
+      <label><input type="radio" name="role-pick" value="client"><span class="title">I hire students</span><span class="small muted">Post briefs as a company</span></label>
+    </fieldset>
+    <form id="signup" class="form-stack mt-24" novalidate></form>
+  </div></div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* Kontrak webfonts. No binaries were supplied with the brand sheet; all three
+   families are Google Fonts and are loaded from the Google Fonts CDN, exactly as
+   the source logo sheet did. Swap these @import lines for @font-face rules if
+   self-hosted files become available. */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap");

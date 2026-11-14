@@ -1,0 +1,38 @@
+:root{
+/* ── Brand base ─────────────────────────────── */
+--navy-900:#0D1B2A;--navy-800:#132539;--navy-700:#1B3149;--navy-600:#274462;--navy-500:#3A5C7E;--navy-400:#5A7A9B;--navy-300:#7C97B4;--navy-200:#A6BACE;--navy-100:#C9D6E2;--navy-050:#E7EDF4;
+--gold-800:#7E5A14;--gold-700:#A0741F;--gold-600:#C8922A;--gold-500:#D9A340;--gold-400:#E4B35A;--gold-300:#EDC782;--gold-200:#F0D6A0;--gold-100:#F7EAD1;--gold-050:#FBF5E9;
+/* ── Warm neutrals ──────────────────────────── */
+--ink:#0F0F0F;--white:#FFFFFF;--warm-white:#F7F5F0;--parchment:#EDE9E0;
+--stone-500:#9A9285;--stone-400:#B4AEA1;--stone-300:#D8D3C8;--stone-200:#E5E2D9;
+--gray-600:#8A8A8A;--gray-500:#AAAAAA;--gray-400:#BBBBBB;--gray-300:#CCCCCC;--gray-200:#DDDDDD;--gray-100:#EEEEEE;
+/* ── Semantic status ────────────────────────── */
+--success:#1F7A5C;--success-soft:#E3F0EA;
+--warning:#B8801C;--warning-soft:#FBF0DC;
+--danger:#A32B22;--danger-soft:#F7E7E4;
+--info:#274462;--info-soft:#E7EDF4;
+/* ── Semantic aliases (use these in components) ── */
+--text-strong:var(--ink);
+--text-body:#2A2A2A;
+--text-muted:var(--gray-600);
+--text-faint:var(--gray-400);
+--text-accent:var(--gold-700);
+--text-on-navy:#FFFFFF;
+--text-on-navy-muted:rgba(255,255,255,0.62);
+--text-on-gold:#FFFFFF;
+--surface-page:var(--warm-white);
+--surface-card:var(--white);
+--surface-sunken:var(--parchment);
+--surface-inverse:var(--navy-900);
+--surface-inverse-raised:#132539;
+--surface-accent:var(--gold-600);
+--surface-accent-soft:var(--gold-050);
+--surface-hover:#FAF9F5;
+--border-hairline:var(--gray-200);
+--border-subtle:var(--stone-200);
+--border-strong:var(--stone-300);
+--border-inverse:rgba(255,255,255,0.12);
+--focus-ring:var(--gold-500);
+--link:var(--gold-700);
+--link-hover:var(--navy-900);
+}

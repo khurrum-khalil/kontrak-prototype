@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For clients · Kontrak</title>
+<meta name="description" content="Post legal briefs and hire verified students in Germany as employees, with a signed engagement letter and fees held in escrow.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kontrak.example/for-clients.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kontrak">
+<meta property="og:title" content="For clients · Kontrak">
+<meta property="og:description" content="Post legal briefs and hire verified students in Germany as employees, with a signed engagement letter and fees held in escrow.">
+<meta property="og:url" content="https://kontrak.example/for-clients.html">
+<meta property="og:image" content="https://kontrak.example/assets/app-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="For clients · Kontrak">
+<meta name="twitter:description" content="Post legal briefs and hire verified students in Germany as employees, with a signed engagement letter and fees held in escrow.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-shell="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <span class="eyebrow on-navy">For clients</span>
+    <div class="gold-rule" style="margin-top:16px"></div>
+    <h1>Overflow legal work, compliantly staffed</h1>
+    <p class="sub">Post a brief and receive scoped bids from verified students at German universities. We check enrolment, permit wording and hour caps before anyone can bid on your work.</p>
+    <div class="cta-row"><a class="btn btn-accent btn-lg" href="#post">Post a brief <span class="ico" aria-hidden="true" style="--i:url(/assets/icons/arrow-right.svg);--s:17px"></span></a><a class="btn btn-on-navy btn-lg" href="/pricing.html">See pricing</a></div>
+  </div>
+  <div class="card" id="post" style="color:var(--text-body)">
+    <span class="label">Post a brief · posting is free</span>
+    <form id="quick-brief" class="form-stack mt-16" novalidate>
+      <div class="field"><label for="qb-title">Title</label><input class="input" id="qb-title" name="title" value="Review a SaaS reseller agreement" required></div>
+      <div class="form-grid">
+        <div class="field"><label for="qb-fee">Fee (€)</label><input class="input" id="qb-fee" name="fee" type="number" min="1" step="10" value="480" required></div>
+        <div class="field"><label for="qb-hours">Scoped hours</label><input class="input" id="qb-hours" name="scoped_hours" type="number" min="0.5" step="0.5" value="14" required></div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label for="qb-jur">Jurisdiction</label><select class="select" id="qb-jur" name="jurisdiction"><option>Germany</option><option>Austria</option><option>Switzerland</option><option>EU-wide</option></select></div>
+        <div class="field"><label for="qb-deadline">Deadline</label><input class="input" id="qb-deadline" name="deadline" type="date" required></div>
+      </div>
+      <div id="qb-rate" aria-live="polite"></div>
+      <button class="btn btn-block" type="submit" id="qb-submit">Continue</button>
+      <p class="xs faint">You add scope, practice areas and the deliverable on the next step. Your company is checked against the Handelsregister before you publish.</p>
+    </form>
+  </div>
+</div></section>
+<section class="section-tight band-parchment"><div class="container grid-4">
+  <div class="stat"><span class="label">Verified students</span><span class="value" id="cs-students">–</span><span class="delta neutral">Live count</span></div>
+  <div class="stat"><span class="label">Open briefs</span><span class="value" id="cs-open">–</span><span class="delta neutral">Live count</span></div>
+  <div class="stat"><span class="label">Posting a brief</span><span class="value">€0</span><span class="delta neutral">No listing fee, no subscription</span></div>
+  <div class="stat navy"><span class="label">Statutory floor</span><span class="value" id="cs-floor">€13.90</span><span class="delta">Per hour, checked on every brief</span></div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-head"><span class="eyebrow">How hiring works</span><h2 class="h2">Four steps, one contract ID</h2></div>
+  <div class="grid-4">
+    <div class="card card-sm card-outline"><div class="between"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/file-text.svg);--s:22px"></span><span class="num" style="font-size:24px;color:var(--gold-200)">01</span></div><h3 class="title mt-12">Post a brief</h3><p class="small muted mt-8">Fee, hours and jurisdiction set upfront. Briefs under the wage floor cannot be published.</p></div>
+    <div class="card card-sm card-outline"><div class="between"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/users.svg);--s:22px"></span><span class="num" style="font-size:24px;color:var(--gold-200)">02</span></div><h3 class="title mt-12">Review bids</h3><p class="small muted mt-8">Each bid shows the student's remaining days and hours, university and practice areas.</p></div>
+    <div class="card card-sm card-outline"><div class="between"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/file-signature.svg);--s:22px"></span><span class="num" style="font-size:24px;color:var(--gold-200)">03</span></div><h3 class="title mt-12">Sign in the app</h3><p class="small muted mt-8">Kontrak generates the engagement letter under German law. Both sides sign it.</p></div>
+    <div class="card card-sm card-outline"><div class="between"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/wallet.svg);--s:22px"></span><span class="num" style="font-size:24px;color:var(--gold-200)">04</span></div><h3 class="title mt-12">Fund escrow</h3><p class="small muted mt-8">Funds are held until you sign off the delivered work.</p></div>
+  </div>
+</div></section>
+<section class="section band-parchment"><div class="container grid-2">
+  <div class="card"><span class="label">What we check</span>
+    <div class="rows mt-12">
+      <div><span class="row"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/badge-check.svg);--s:17px"></span> Enrolment, through the university email</span></div>
+      <div><span class="row"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/shield-check.svg);--s:17px"></span> Residence permit wording, recorded at sign-up</span></div>
+      <div><span class="row"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/clock.svg);--s:17px"></span> Remaining days and weekly hours, before every bid</span></div>
+      <div><span class="row"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/euro.svg);--s:17px"></span> Effective hourly rate against the statutory minimum</span></div>
+      <div><span class="row"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/landmark.svg);--s:17px"></span> Your company, against the Handelsregister</span></div>
+    </div></div>
+  <div class="card card-navy"><span class="label">Why employment, not freelancing</span>
+    <h3 class="h3 mt-8" style="color:#fff">The student works for you as an employee</h3>
+    <p class="muted mt-12" style="line-height:1.65">Non-EU students may not freelance without separate permission. Kontrak engages them under an employment contract for each brief, which their §16b permit generally allows within the day account. That keeps your engagement on the right side of the rules too.</p>
+    <a class="btn btn-on-navy btn-sm mt-16" href="/legal-notes.html">How the compliance model works</a></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/for-clients.js"></script>
+</body>
+</html>

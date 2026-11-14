@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in · Kontrak</title>
+<meta name="description" content="Log in to Kontrak as a student, client or admin.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kontrak.example/login.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kontrak">
+<meta property="og:title" content="Log in · Kontrak">
+<meta property="og:description" content="Log in to Kontrak as a student, client or admin.">
+<meta property="og:url" content="https://kontrak.example/login.html">
+<meta property="og:image" content="https://kontrak.example/assets/app-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Log in · Kontrak">
+<meta name="twitter:description" content="Log in to Kontrak as a student, client or admin.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-shell="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+
+<div class="auth-wrap">
+  <div class="auth-side"><span class="eyebrow on-navy">Welcome back</span><h1 class="h2">Your day account, your contracts, your escrow. In one place.</h1>
+    <p class="muted" style="color:var(--text-on-navy-muted)">Every engagement carries one contract ID. Everything else hangs off it.</p></div>
+  <div class="auth-main"><div>
+    <h2 class="h3">Log in</h2>
+    <form id="login" class="form-stack mt-16" novalidate>
+      <div class="field"><label for="l-email">Email</label><input class="input" id="l-email" name="email" type="email" autocomplete="username" required></div>
+      <div class="field"><label for="l-pw">Password</label><input class="input" id="l-pw" name="password" type="password" autocomplete="current-password" required></div>
+      <button class="btn btn-block" type="submit">Log in</button>
+      <p class="small muted">No account yet? <a href="/signup.html">Create one</a>.</p>
+    </form>
+    <div class="card card-sunken mt-32"><div class="between"><span class="label">Try the demo · one click</span><span class="badge">Demo data</span></div>
+      <p class="small muted mt-8">Each demo account shows one scenario. Password for all of them: <code>Kontrak2026</code></p>
+      <div class="demo-logins mt-16" id="demo-logins"></div></div>
+  </div></div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/login.js"></script>
+</body>
+</html>

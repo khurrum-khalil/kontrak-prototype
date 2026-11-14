@@ -1,0 +1,462 @@
+{
+ "generated_for": "2026-11-14",
+ "note": "Read-only demo snapshot for front-end work without the server. Run npm start for the real app.",
+ "briefs": [
+  {
+   "id": "B-0001",
+   "title": "Review a SaaS reseller agreement",
+   "description": "We are signing our first reseller in Austria and need a careful first-pass review of their paper before our GC negotiates.",
+   "scope_deliverable": "The Student Employee shall deliver a marked-up copy of the Reseller Agreement together with a written risk note of no more than one page, identifying provisions that depart materially from market standard.",
+   "practice_areas": [
+    "Commercial",
+    "SaaS & IT"
+   ],
+   "fee_cents": 48000,
+   "scoped_hours": 14,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Berlin",
+   "deadline": "2026-12-11",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-14T10:00:00.000Z",
+   "client_id": "U-0007",
+   "client": {
+    "company_name": "Aurelis Studio",
+    "city": "Berlin",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3429,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 5,
+   "bids_count": 2,
+   "is_demo": true
+  },
+  {
+   "id": "B-0002",
+   "title": "DPA and SCC pack for a cloud migration",
+   "description": "A client is moving its HR system to a US cloud provider. We need the data-processing paperwork prepared for partner review.",
+   "scope_deliverable": "The Student Employee shall prepare a draft data processing agreement under Art. 28 GDPR and the applicable Standard Contractual Clauses module, with a transfer impact assessment template.",
+   "practice_areas": [
+    "Data protection",
+    "Drafting"
+   ],
+   "fee_cents": 61200,
+   "scoped_hours": 18,
+   "jurisdiction": "Germany",
+   "location_mode": "On-site",
+   "city": "München",
+   "deadline": "2026-12-08",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-13T10:00:00.000Z",
+   "client_id": "U-0008",
+   "client": {
+    "company_name": "Ferrow Legal",
+    "city": "München",
+    "verified": true,
+    "legal_form": "Rechtsanwaltsgesellschaft mbH"
+   },
+   "effective_hourly_cents": 3400,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 5,
+   "bids_count": 1,
+   "is_demo": true
+  },
+  {
+   "id": "B-0003",
+   "title": "AI Act risk-classification memo for a scoring model",
+   "description": "Our client runs a credit-scoring model. We need a structured memo on how it is classified under the AI Act.",
+   "scope_deliverable": "The Student Employee shall deliver a memo of no more than eight pages classifying the system under the AI Act, listing the resulting obligations and open questions.",
+   "practice_areas": [
+    "AI & regulation",
+    "Research"
+   ],
+   "fee_cents": 62000,
+   "scoped_hours": 16,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Berlin",
+   "deadline": "2026-12-14",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-11T10:00:00.000Z",
+   "client_id": "U-0009",
+   "client": {
+    "company_name": "Halden & Co.",
+    "city": "Berlin",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3875,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 6,
+   "bids_count": 1,
+   "is_demo": true
+  },
+  {
+   "id": "B-0004",
+   "title": "Open-source licence audit for a Series A data room",
+   "description": "Our portfolio company is raising its Series A. Investors want a clean view of the open-source licences in the codebase.",
+   "scope_deliverable": "The Student Employee shall review the dependency export provided, classify each licence by obligation type and deliver a spreadsheet with a one-page summary of copyleft exposure.",
+   "practice_areas": [
+    "IP & licensing",
+    "Due diligence"
+   ],
+   "fee_cents": 54600,
+   "scoped_hours": 21,
+   "jurisdiction": "Germany",
+   "location_mode": "On-site",
+   "city": "Hamburg",
+   "deadline": "2026-12-05",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-10T10:00:00.000Z",
+   "client_id": "U-0010",
+   "client": {
+    "company_name": "Nordwind Ventures",
+    "city": "Hamburg",
+    "verified": true,
+    "legal_form": "GmbH & Co. KG"
+   },
+   "effective_hourly_cents": 2600,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 4,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0005",
+   "title": "Trademark filing support across 6 Nice classes",
+   "description": "We are registering our fintech brand at the DPMA and EUIPO and need the class specifications drafted.",
+   "scope_deliverable": "The Student Employee shall draft goods and services specifications for six Nice classes and a short note on conflicting marks found in a basic search.",
+   "practice_areas": [
+    "IP & licensing",
+    "Filings"
+   ],
+   "fee_cents": 34000,
+   "scoped_hours": 10,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Frankfurt am Main",
+   "deadline": "2026-11-28",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-13T10:00:00.000Z",
+   "client_id": "U-0012",
+   "client": {
+    "company_name": "Selfa Pay",
+    "city": "Frankfurt am Main",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3400,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 3,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0006",
+   "title": "SaaS contract templates for a Series A team",
+   "description": "We are standardising our customer contracts after our Series A and need a clean template set.",
+   "scope_deliverable": "The Student Employee shall deliver a master subscription agreement template, an order form and a service-level schedule, each with drafting notes.",
+   "practice_areas": [
+    "Corporate",
+    "Drafting"
+   ],
+   "fee_cents": 58000,
+   "scoped_hours": 20,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Leipzig",
+   "deadline": "2026-12-19",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-09T10:00:00.000Z",
+   "client_id": "U-0011",
+   "client": {
+    "company_name": "Kelvin Analytics",
+    "city": "Leipzig",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 2900,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 6,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0007",
+   "title": "BaFin outsourcing clauses for a payments integration",
+   "description": "A new payments partner must meet our outsourcing requirements. We need the clauses checked against the supervisory guidance.",
+   "scope_deliverable": "The Student Employee shall compare the partner agreement with the outsourcing requirements and deliver a gap table with proposed clause wording.",
+   "practice_areas": [
+    "Fintech",
+    "Regulatory"
+   ],
+   "fee_cents": 52000,
+   "scoped_hours": 15,
+   "jurisdiction": "Germany",
+   "location_mode": "On-site",
+   "city": "Frankfurt am Main",
+   "deadline": "2026-11-26",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-12T10:00:00.000Z",
+   "client_id": "U-0012",
+   "client": {
+    "company_name": "Selfa Pay",
+    "city": "Frankfurt am Main",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3467,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 3,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0008",
+   "title": "Market-definition note for a merger filing",
+   "description": "We advise on a merger filing and need a research note on how the relevant market has been defined in past decisions.",
+   "scope_deliverable": "The Student Employee shall deliver a research note of no more than six pages summarising market definitions in comparable Bundeskartellamt and Commission decisions.",
+   "practice_areas": [
+    "Competition",
+    "Research"
+   ],
+   "fee_cents": 43400,
+   "scoped_hours": 14,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Berlin",
+   "deadline": "2026-12-04",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-08T10:00:00.000Z",
+   "client_id": "U-0013",
+   "client": {
+    "company_name": "Ostwald Economics",
+    "city": "Berlin",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3100,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 4,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0009",
+   "title": "Cookie consent and banner audit",
+   "description": "Our marketing site uses several tracking tools. We want to know whether the consent banner meets current requirements.",
+   "scope_deliverable": "The Student Employee shall audit the consent banner against the TDDDG and GDPR and deliver a findings table with recommended fixes.",
+   "practice_areas": [
+    "Data protection"
+   ],
+   "fee_cents": 28000,
+   "scoped_hours": 8,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Berlin",
+   "deadline": "2026-11-23",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-13T10:00:00.000Z",
+   "client_id": "U-0007",
+   "client": {
+    "company_name": "Aurelis Studio",
+    "city": "Berlin",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3500,
+   "floor_cents": 1390,
+   "day_cap_safe": true,
+   "weeks": 3,
+   "bids_count": 1,
+   "is_demo": true
+  },
+  {
+   "id": "B-0010",
+   "title": "Supplier-contract red-flag summary, 30 contracts",
+   "description": "Before closing, we need a quick red-flag pass across thirty supplier contracts in the data room.",
+   "scope_deliverable": "The Student Employee shall review thirty supplier contracts and deliver a red-flag summary covering change of control, exclusivity, liability caps and termination rights.",
+   "practice_areas": [
+    "Commercial",
+    "Due diligence"
+   ],
+   "fee_cents": 90000,
+   "scoped_hours": 44,
+   "jurisdiction": "Germany",
+   "location_mode": "Remote",
+   "city": "Hamburg",
+   "deadline": "2026-11-20",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-14T10:00:00.000Z",
+   "client_id": "U-0010",
+   "client": {
+    "company_name": "Nordwind Ventures",
+    "city": "Hamburg",
+    "verified": true,
+    "legal_form": "GmbH & Co. KG"
+   },
+   "effective_hourly_cents": 2045,
+   "floor_cents": 1390,
+   "day_cap_safe": false,
+   "weeks": 2,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0011",
+   "title": "GmbH formation checklist for an Austrian subsidiary",
+   "description": "A client is setting up a subsidiary in Vienna and needs a formation checklist.",
+   "scope_deliverable": "The Student Employee shall deliver a checklist of formation steps, documents and filing fees for an Austrian GmbH.",
+   "practice_areas": [
+    "Corporate"
+   ],
+   "fee_cents": 30000,
+   "scoped_hours": 10,
+   "jurisdiction": "Austria",
+   "location_mode": "Remote",
+   "city": "Wien",
+   "deadline": "2026-12-09",
+   "min_permit_types": [
+    "§16b student permit (non-EU)",
+    "§16f language course",
+    "§20 job-seeking permit",
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-12T10:00:00.000Z",
+   "client_id": "U-0009",
+   "client": {
+    "company_name": "Halden & Co.",
+    "city": "Berlin",
+    "verified": true,
+    "legal_form": "GmbH"
+   },
+   "effective_hourly_cents": 3000,
+   "floor_cents": 1390,
+   "day_cap_safe": false,
+   "weeks": 5,
+   "bids_count": 0,
+   "is_demo": true
+  },
+  {
+   "id": "B-0012",
+   "title": "Three-week data-room sprint, full time",
+   "description": "An intensive due-diligence sprint on site, five full days a week for three weeks.",
+   "scope_deliverable": "The Student Employee shall index and summarise the target's commercial contracts in the data room during a three-week full-time sprint.",
+   "practice_areas": [
+    "Due diligence",
+    "Commercial"
+   ],
+   "fee_cents": 210000,
+   "scoped_hours": 120,
+   "jurisdiction": "Germany",
+   "location_mode": "On-site",
+   "city": "Hamburg",
+   "deadline": "2026-12-05",
+   "min_permit_types": [
+    "EU/EEA citizen"
+   ],
+   "languages": "English",
+   "status": "open",
+   "posted_at": "2026-11-11T10:00:00.000Z",
+   "client_id": "U-0010",
+   "client": {
+    "company_name": "Nordwind Ventures",
+    "city": "Hamburg",
+    "verified": true,
+    "legal_form": "GmbH & Co. KG"
+   },
+   "effective_hourly_cents": 1750,
+   "floor_cents": 1390,
+   "day_cap_safe": false,
+   "weeks": 4,
+   "bids_count": 0,
+   "is_demo": true
+  }
+ ],
+ "stats": {
+  "open_briefs": 12,
+  "verified_students": 5,
+  "compliant_placements": 3
+ }
+}

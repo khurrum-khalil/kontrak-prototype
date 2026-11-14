@@ -1,0 +1,5 @@
+:root{
+--space-0:0;--space-1:2px;--space-2:4px;--space-3:6px;--space-4:8px;--space-5:12px;--space-6:14px;--space-7:16px;--space-8:20px;--space-9:22px;--space-10:24px;--space-11:28px;--space-12:32px;--space-13:36px;--space-14:40px;--space-15:48px;--space-16:56px;--space-17:64px;--space-18:80px;--space-19:96px;--space-20:120px;
+--gutter-card:36px;--gutter-section:64px;--gutter-page:40px;
+--maxw-prose:64ch;/* @kind spacing */--maxw-content:1200px;/* @kind spacing */--maxw-narrow:840px;/* @kind spacing */
+}

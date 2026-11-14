@@ -1,0 +1,16 @@
+/* Engagement letter typography. Used in the app and on the printable letter page. */
+.letter .l-head{border-bottom:1px solid #DDD;padding-bottom:22px;margin-bottom:8px}
+.letter .l-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#A0741F;margin-bottom:12px}
+.letter h1{font:300 34px/1.2 'Cormorant Garamond',Georgia,serif;margin:0 0 8px;color:#0F0F0F}
+.letter .l-sub{color:#8A8A8A;font-size:14px}
+.letter h2{font:600 15px/1.3 'Syne',system-ui,sans-serif;margin:26px 0 8px;color:#0F0F0F}
+.letter p{margin:0 0 10px}
+.letter strong{font-weight:500;color:#0F0F0F}
+.letter .sigs{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+.letter .sig{border-top:1px solid #0D1B2A;padding-top:12px}
+.letter .sig-name{font:300 24px/1.2 'Cormorant Garamond',Georgia,serif;color:#0D1B2A;min-height:30px}
+.letter .sig-name.pending{font:400 13px/2 'DM Sans',sans-serif;color:#AAAAAA}
+.letter .sig-meta{font-size:12px;color:#8A8A8A}
+.letter .sig-role{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8A8A8A;margin-top:6px}
+.letter .l-foot{margin-top:32px;font-size:12px;color:#AAAAAA}
+@media (max-width:640px){.letter .sigs{grid-template-columns:1fr}}

@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Feedback · Dialog, toast, tooltip" subtitle="Modal on navy scrim, toast tones, hover tip" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{padding:20px;background:var(--warm-white)}.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Toast, Tooltip, Dialog, Button, Icon } = window.KontrakDesignSystem_5cbea0;
+function Demo(){
+  const [open,setOpen]=React.useState(false);
+  return (
+    <div className="col" style={{gap:16}}>
+      <div className="row" style={{alignItems:'flex-start',gap:14}}>
+        <Toast tone="success" title="Bid sent" icon={<Icon name="check-circle" />} onDismiss={()=>{}}>Priya usually replies within a day.</Toast>
+        <Toast tone="warning" title="Signature pending" icon={<Icon name="clock" />}>The contract expires in 48 hours.</Toast>
+      </div>
+      <div className="row" style={{gap:20}}>
+        <Tooltip label="Held until both parties sign off"><span className="row" style={{gap:6,color:'var(--text-muted)',fontSize:'var(--fs-base)'}}><Icon name="info" size={15} /> What is escrow?</span></Tooltip>
+        <Button variant="secondary" onClick={()=>setOpen(true)}>Open dialog</Button>
+      </div>
+      <Dialog open={open} eyebrow="Escrow" title="Release £480 to Maya?" onClose={()=>setOpen(false)}
+        footer={<><Button variant="ghost" onClick={()=>setOpen(false)}>Not yet</Button><Button variant="accent" onClick={()=>setOpen(false)}>Release funds</Button></>}>
+        Once released, this payment can't be reversed.
+      </Dialog>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

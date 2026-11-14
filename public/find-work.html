@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find work · Kontrak</title>
+<meta name="description" content="Browse open legal briefs for students in Germany. Every brief shows fee, scoped hours, effective hourly rate and whether it is Day-Cap Safe.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kontrak.example/find-work.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kontrak">
+<meta property="og:title" content="Find work · Kontrak">
+<meta property="og:description" content="Browse open legal briefs for students in Germany. Every brief shows fee, scoped hours, effective hourly rate and whether it is Day-Cap Safe.">
+<meta property="og:url" content="https://kontrak.example/find-work.html">
+<meta property="og:image" content="https://kontrak.example/assets/app-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Find work · Kontrak">
+<meta name="twitter:description" content="Browse open legal briefs for students in Germany. Every brief shows fee, scoped hours, effective hourly rate and whether it is Day-Cap Safe.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-shell="site">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head "><div class="container">
+  <span class="eyebrow ">Open briefs</span><h1 class="h1">Find legal work you can take</h1><p class="lead">Guests can browse every open brief. Log in as a student to see your matched feed and bid.</p>
+</div></section>
+<section class="section-tight"><div class="container">
+  <form class="card card-md stack" id="filters" role="search" style="--gap:16px">
+    <div class="grid-4" style="grid-template-columns:2fr 1fr 1fr 1fr">
+      <div class="input-icon"><label class="sr-only" for="f-q">Search</label><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/search.svg);--s:15px"></span><input class="input" id="f-q" name="q" placeholder="Search briefs, clients, practice areas"></div>
+      <div><label class="sr-only" for="f-jur">Jurisdiction</label><select class="select" id="f-jur" name="jurisdiction"><option value="">All jurisdictions</option><option>Germany</option><option>Austria</option><option>Switzerland</option><option>EU-wide</option></select></div>
+      <div><label class="sr-only" for="f-mode">Work mode</label><select class="select" id="f-mode" name="mode"><option value="">Remote or on-site</option><option>Remote</option><option>On-site</option></select></div>
+      <div><label class="sr-only" for="f-sort">Sort</label><select class="select" id="f-sort" name="sort"><option value="newest">Newest first</option><option value="fee">Highest fee</option><option value="rate">Highest hourly rate</option><option value="deadline">Soonest deadline</option></select></div>
+    </div>
+    <div class="between"><div class="tags" id="f-areas" aria-label="Practice areas"></div>
+      <label class="switch"><input type="checkbox" id="f-fits" name="fits"><span>Fits my remaining days</span></label></div>
+    <p class="xs faint" id="fits-note" hidden></p>
+  </form>
+  <div class="between mt-24 mb-16"><div class="tabs" id="f-tabs"></div><span class="small muted" id="f-count" aria-live="polite"></span></div>
+  <div class="grid-2" id="results"><div class="skeleton"></div><div class="skeleton"></div></div>
+  <div class="callout info mt-24"><span class="ico" aria-hidden="true" style="--i:url(/assets/icons/info.svg);--s:18px"></span><div><b>Day-Cap Safe</b> means the scoped hours fit a 20 h week across the brief's timeline, the fee reaches the statutory minimum per hour, and the brief sits under German law. Your own day account is checked again when you bid. <a href="/day-cap-checker.html">Check your remaining days</a>.</div></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/find-work.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONTRAK — Final Logo</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;600&family=Cormorant+Garamond:wght@300;400;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C8922A;
+    --gold-light: #E4B35A;
+    --navy: #0D1B2A;
+    --ink: #0F0F0F;
+    --warm-white: #F7F5F0;
+    --parchment: #EDE9E0;
+  }
+
+  body {
+    background: var(--warm-white);
+    font-family: 'DM Sans', sans-serif;
+    padding: 60px 40px;
+    color: var(--ink);
+  }
+
+  /* PAGE HEADER */
+  .page-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .page-header .eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+
+  .page-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--ink);
+  }
+
+  /* SECTION LABELS */
+  .section-label {
+    font-size: 9.5px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 20px;
+    padding-left: 2px;
+  }
+
+  /* ══════════════════════════════
+     HERO LOGO — PRIMARY VERSION
+  ══════════════════════════════ */
+  .hero {
+    background: #fff;
+    border-radius: 6px;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .logo-primary {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  /* THE ICON */
+  .k-icon {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 16px rgba(13,27,42,0.18));
+  }
+
+  /* WORDMARK */
+  .wordmark-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .wordmark-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .wordmark-name span {
+    color: var(--gold);
+  }
+
+  .wordmark-tagline {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #bbb;
+    padding-left: 2px;
+  }
+
+  /* DIVIDER */
+  .divider-line {
+    width: 1.5px;
+    height: 52px;
+    background: linear-gradient(to bottom, transparent, #ddd, transparent);
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════
+     VARIATION GRID
+  ══════════════════════════════ */
+  .variations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .var-card {
+    border-radius: 6px;
+    padding: 48px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .var-card.on-white { background: #fff; }
+  .var-card.on-navy  { background: var(--navy); }
+  .var-card.on-gold  { background: var(--gold); }
+
+  .var-label {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #ccc;
+    text-align: center;
+  }
+
+  .var-card.on-navy .var-label { color: rgba(255,255,255,0.3); }
+  .var-card.on-gold .var-label { color: rgba(255,255,255,0.6); }
+
+  /* Logo inside variation cards */
+  .logo-sm {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo-sm .wm {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .logo-sm .wm span { color: var(--gold); }
+  .on-navy .logo-sm .wm { color: #fff; }
+  .on-navy .logo-sm .wm span { color: var(--gold-light); }
+  .on-gold .logo-sm .wm { color: #fff; }
+  .on-gold .logo-sm .wm span { color: rgba(255,255,255,0.7); }
+
+  /* ══════════════════════════════
+     ICON ONLY — APP ICON SIZES
+  ══════════════════════════════ */
+  .icon-sizes {
+    background: #fff;
+    border-radius: 6px;
+    padding: 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .icon-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .icon-size-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon-size-item .size-label {
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 1px;
+  }
+
+  /* ══════════════════════════════
+     CLEARSPACE & COLORS
+  ══════════════════════════════ */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .info-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 36px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .info-card h3 {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 24px;
+  }
+
+  .palette-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .palette-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .palette-swatch {
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+  }
+
+  .palette-name {
+    font-size: 9.5px;
+    color: #aaa;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .palette-hex {
+    font-size: 9px;
+    color: #ccc;
+    font-family: monospace;
+  }
+
+  .typeface-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .typeface-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .typeface-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+
+  .typeface-sample {
+    font-size: 20px;
+    color: var(--ink);
+  }
+
+  .typeface-sample.syne { font-family: 'Syne', sans-serif; font-weight: 700; }
+  .typeface-sample.dm { font-family: 'DM Sans', sans-serif; font-weight: 300; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Brand Identity · Final Selection</div>
+  <h1>KONTRAK — Logo System</h1>
+</div>
+
+<!-- ── HERO: PRIMARY LOGO ── -->
+<div class="section-label">Primary Logo — Light Background</div>
+<div class="hero">
+  <div class="logo-primary">
+
+    <!-- SPLIT K ICON -->
+    <svg class="k-icon" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="72" height="72" rx="14" fill="#0D1B2A"/>
+      <!-- K vertical bar -->
+      <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+      <!-- K upper arm — white -->
+      <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+      <!-- K lower arm — gold (student side) -->
+      <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      <!-- subtle inner glow on split -->
+      <line x1="24" y1="36" x2="53" y2="36" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </svg>
+
+    <div class="divider-line"></div>
+
+    <!-- WORDMARK -->
+    <div class="wordmark-stack">
+      <div class="wordmark-name">KONTR<span>AK</span></div>
+      <div class="wordmark-tagline">Work Legal · Work Smart</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── VARIATIONS ── -->
+<div class="section-label">Logo Variations</div>
+<div class="variations-grid">
+
+  <!-- ON WHITE -->
+  <div class="var-card on-white">
+    <div class="logo-sm">
+      <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="14" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="wm">KONTR<span>AK</span></div>
+    </div>
+    <div class="var-label">On White</div>
+  </div>
+
+  <!-- ON NAVY -->
+  <div class="var-card on-navy">
+    <div class="logo-sm">
+      <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="14" fill="rgba(255,255,255,0.08)"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#E4B35A"/>
+      </svg>
+      <div class="wm">KONTR<span>AK</span></div>
+    </div>
+    <div class="var-label">On Navy</div>
+  </div>
+
+  <!-- ON GOLD -->
+  <div class="var-card on-gold">
+    <div class="logo-sm">
+      <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="14" fill="rgba(255,255,255,0.15)"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="rgba(255,255,255,0.55)"/>
+      </svg>
+      <div class="wm">KONTR<span>AK</span></div>
+    </div>
+    <div class="var-label">On Gold</div>
+  </div>
+
+</div>
+
+<!-- ── APP ICON SIZES ── -->
+<div class="section-label">Icon Only — App Sizes</div>
+<div class="icon-sizes">
+  <div class="icon-row">
+
+    <div class="icon-size-item">
+      <svg width="96" height="96" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="16" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="size-label">96px</div>
+    </div>
+
+    <div class="icon-size-item">
+      <svg width="64" height="64" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="15" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="size-label">64px</div>
+    </div>
+
+    <div class="icon-size-item">
+      <svg width="48" height="48" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="14" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="size-label">48px</div>
+    </div>
+
+    <div class="icon-size-item">
+      <svg width="32" height="32" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="13" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="size-label">32px</div>
+    </div>
+
+    <div class="icon-size-item">
+      <svg width="20" height="20" viewBox="0 0 72 72" fill="none">
+        <rect width="72" height="72" rx="12" fill="#0D1B2A"/>
+        <rect x="18" y="15" width="6" height="42" rx="1" fill="white"/>
+        <polygon points="24,36 46,15 53,15 31,36" fill="white"/>
+        <polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/>
+      </svg>
+      <div class="size-label">20px</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── BOTTOM: COLORS + TYPE ── -->
+<div class="bottom-grid">
+
+  <div class="info-card">
+    <h3>Brand Colours</h3>
+    <div class="palette-row">
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#0D1B2A;"></div>
+        <div class="palette-name">Deep Navy</div>
+        <div class="palette-hex">#0D1B2A</div>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#C8922A;"></div>
+        <div class="palette-name">Contract Gold</div>
+        <div class="palette-hex">#C8922A</div>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#0F0F0F;"></div>
+        <div class="palette-name">Ink Black</div>
+        <div class="palette-hex">#0F0F0F</div>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#F7F5F0; border:1px solid #e5e2d9;"></div>
+        <div class="palette-name">Warm White</div>
+        <div class="palette-hex">#F7F5F0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Typography</h3>
+    <div class="typeface-row">
+      <div class="typeface-item">
+        <div class="typeface-label">Logo · Headings</div>
+        <div class="typeface-sample syne">Syne Bold</div>
+      </div>
+      <div class="typeface-item">
+        <div class="typeface-label">Body · UI Text</div>
+        <div class="typeface-sample dm">DM Sans Light</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

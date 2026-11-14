@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Kontrak — Student app</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.474.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script>
+(function(){
+  const NS = 'KontrakDesignSystem_5cbea0';
+  const pascal = (n) => n.split('-').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join('');
+  const ALIAS = { CheckCircle:'CircleCheck', MoreHorizontal:'Ellipsis', FileSignature:'FileSignature' };
+  function node(name){
+    const L = window.lucide && (window.lucide.icons || window.lucide);
+    if (!L) return null;
+    const key = pascal(name);
+    return L[key] || L[ALIAS[key]] || null;
+  }
+  function toEl(spec, i){
+    if (!Array.isArray(spec)) return null;
+    const [tag, attrs, children] = spec;
+    const props = Object.assign({ key: i }, attrs || {});
+    const kids = Array.isArray(children) ? children.map(toEl) : null;
+    return React.createElement(tag, props, kids);
+  }
+  function patch(){
+    const ns = window[NS];
+    if (!ns) return false;
+    ns.Icon = function Icon(props){
+      const { name, size = 18, color = 'currentColor', style, className } = props || {};
+      const spec = node(name);
+      const kids = spec ? (Array.isArray(spec[2]) ? spec[2] : Array.isArray(spec) && Array.isArray(spec[1]) ? spec[1] : []) : [];
+      return React.createElement('svg', {
+        className: className, 'aria-hidden': 'true', 'data-icon': name,
+        width: size, height: size, viewBox: '0 0 24 24', fill: 'none',
+        stroke: color === 'currentColor' ? 'currentColor' : color,
+        strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round',
+        style: Object.assign({ display: 'inline-block', flexShrink: 0, color: color }, style || {}),
+      }, kids.map(toEl));
+    };
+    return true;
+  }
+  if (!patch()) document.addEventListener('DOMContentLoaded', patch);
+})();
+</script>
+<style>html,body{height:100%}body{background:var(--warm-white)}</style>
+<template id="__bundler_thumbnail" data-bg-color="#0D1B2A">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#0D1B2A"/><g transform="translate(390 220) scale(5)"><rect x="18" y="15" width="6" height="42" rx="1" fill="#ffffff"/><polygon points="24,36 46,15 53,15 31,36" fill="#ffffff"/><polygon points="24,36 46,57 53,57 31,36" fill="#C8922A"/></g></svg>
+</template>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="Shell.jsx"></script>
+<script type="text/babel" src="Dashboard.jsx"></script>
+<script type="text/babel" src="Briefs.jsx"></script>
+<script type="text/babel" src="ContractDetail.jsx"></script>
+<script type="text/babel" src="Messages.jsx"></script>
+<script type="text/babel" data-presets="react">
+(function(){
+const { Button, Icon } = window.KontrakDesignSystem_5cbea0;
+const TITLES = {
+  dashboard: ['Aisha Rahman · LLM candidate', 'Your work'],
+  briefs: ['34 open briefs', 'Find briefs'],
+  contracts: ['Engagement letter · KTK-2026-0413', 'Contract'],
+  messages: ['3 conversations', 'Messages'],
+  payments: ['Escrow and payouts', 'Payments'],
+};
+function App(){
+  const [route, setRoute] = React.useState('dashboard');
+  const [eyebrow, title] = TITLES[route];
+  return (
+    <div style={{ display:'flex', minHeight:'100vh' }}>
+      <Sidebar route={route} go={setRoute} />
+      <main style={{ flex:1, minWidth:0 }}>
+        <TopBar eyebrow={eyebrow} title={title} actions={route === 'briefs'
+          ? <Button variant="accent" size="sm" iconLeft={<Icon name="plus" size={14} />}>Save search</Button>
+          : <Button variant="primary" size="sm" onClick={() => setRoute('briefs')} iconLeft={<Icon name="search" size={14} />}>Find work</Button>} />
+        {route === 'dashboard' && <Dashboard go={setRoute} />}
+        {route === 'briefs' && <Briefs go={setRoute} />}
+        {route === 'contracts' && <ContractDetail go={setRoute} />}
+        {route === 'messages' && <Messages />}
+        {route === 'payments' && <ContractDetail go={setRoute} />}
+      </main>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+})();
+</script>
+</body></html>

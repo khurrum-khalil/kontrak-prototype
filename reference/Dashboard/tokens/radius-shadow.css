@@ -1,0 +1,15 @@
+:root{
+--radius-xs:2px;--radius-sm:4px;--radius-md:6px;--radius-lg:10px;--radius-xl:14px;--radius-2xl:16px;--radius-pill:999px;
+--border-width:1px;--border-width-hair:1.5px;
+/* Shadows are whisper-quiet on light surfaces; only the mark gets a real lift */
+--shadow-card:0 1px 4px rgba(0,0,0,0.05);
+--shadow-raised:0 2px 8px rgba(13,27,42,0.07);
+--shadow-lift:0 4px 16px rgba(13,27,42,0.18);
+--shadow-pop:0 12px 32px rgba(13,27,42,0.12);
+--shadow-inset-hair:inset 0 0 0 1px var(--border-subtle);
+--ring-focus:0 0 0 2px var(--warm-white),0 0 0 4px var(--gold-500);
+/* Protection gradient for text over imagery */
+--scrim-navy:linear-gradient(to top,rgba(13,27,42,0.88),rgba(13,27,42,0.15) 60%,transparent);/* @kind other */
+--rule-fade:linear-gradient(to bottom,transparent,var(--gray-200),transparent);/* @kind other */
+--rule-fade-h:linear-gradient(to right,transparent,var(--gray-200),transparent);/* @kind other */
+}

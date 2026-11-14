@@ -1,0 +1,19 @@
+{
+  "name": "kontrak-prototype",
+  "version": "1.0.0",
+  "description": "Kontrak. Work legal, work smart. Compliance-first work platform prototype for non-EU students in Germany.",
+  "type": "module",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node server/seed.js --reset",
+    "seed": "node server/seed.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2"
+  }
+}
